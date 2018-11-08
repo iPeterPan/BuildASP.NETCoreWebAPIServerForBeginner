@@ -28,6 +28,7 @@ namespace RESTAPITestServer
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             // To render name of controllers to lowercase in URL.
+            // controller name 을 Lowercase 로 Redering 할 수 있게 합니다.
             services.AddRouting(opt => opt.LowercaseUrls = true);
         }
 
