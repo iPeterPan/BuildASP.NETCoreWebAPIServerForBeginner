@@ -26,6 +26,9 @@ namespace RESTAPITestServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            // To render name of controllers to lowercase in URL.
+            services.AddRouting(opt => opt.LowercaseUrls = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
